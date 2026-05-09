@@ -67,7 +67,7 @@ function Register() {
           <input
             name="email"
             type="email"
-            placeholder="amalia@email.com"
+            placeholder="example@gmail.com"
             value={form.email}
             onChange={handleChange}
             className="w-full rounded-2xl border border-fuchsia-100 bg-white px-4 py-3 outline-none focus:ring-2 focus:ring-fuchsia-300"
@@ -88,7 +88,7 @@ function Register() {
         </form>
 
         <p className="text-center mt-6 text-slate-500">
-          Ai deja cont?{" "}
+          Already have an account?{" "}
           <Link to="/login" className="font-semibold text-fuchsia-600">
             Login
           </Link>
