@@ -61,7 +61,7 @@ function Login() {
             <input
               name="email"
               type="email"
-              placeholder="example@gmail.com"
+              placeholder="example@e-mail.com"
               value={form.email}
               onChange={handleChange}
               className="w-full rounded-2xl border border-fuchsia-100 bg-white px-4 py-3 outline-none focus:ring-2 focus:ring-fuchsia-300"

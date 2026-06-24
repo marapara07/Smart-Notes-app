@@ -8,14 +8,6 @@ function Dashboard() {
   const [notes, setNotes] = useState([]);
   const [error, setError] = useState("");
 
-  const fetchNotes = async () => {
-    try {
-      const response = await API.get("/notes");
-      setNotes(response.data);
-    } catch (err) {
-      setError(err.response?.data?.message || "Failed to load notes");
-    }
-  };
 
   const deleteNote = async (id) => {
     if (!confirm("Are you sure you want to delete this note?")) return;
@@ -29,6 +21,14 @@ function Dashboard() {
   };
 
   useEffect(() => {
+     const fetchNotes = async () => {
+    try {
+      const response = await API.get("/notes");
+      setNotes(response.data);
+    } catch (err) {
+      setError(err.response?.data?.message || "Failed to load notes");
+    }
+  };
     fetchNotes();
   }, []);
 
@@ -47,8 +47,7 @@ function Dashboard() {
                 My Notes
               </h2>
               <p className="text-slate-600 max-w-2xl">
-                Create, edit, summarize and search your notes using Gemini AI,
-                embeddings and RAG.
+                Create, edit, summarize and search your personalized notes.
               </p>
             </div>
 

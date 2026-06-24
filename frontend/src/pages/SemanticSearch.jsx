@@ -32,10 +32,10 @@ function SemanticSearch() {
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
         <div className="rounded-3xl bg-white/85 backdrop-blur-md border border-white shadow-lg shadow-fuchsia-100 p-6 md:p-8 mb-6">
           <p className="inline-block mb-3 px-4 py-1 rounded-full bg-pink-100 text-pink-700 text-sm font-semibold">
-            Embeddings feature
+            You remember the topic, but can't find the note? No worries!
           </p>
           <h1 className="text-3xl font-bold text-slate-800 mb-2">
-            Semantic Search
+            Search in your notes
           </h1>
           <p className="text-slate-600 mb-5">
             Search notes by meaning, not only by exact words.
@@ -50,7 +50,7 @@ function SemanticSearch() {
           <form onSubmit={handleSearch} className="flex flex-col md:flex-row gap-3">
             <input
               type="text"
-              placeholder="Ex: how to protect private routes"
+              placeholder="Introduce your ideas here..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               className="flex-1 rounded-2xl border border-fuchsia-100 px-4 py-3 outline-none focus:ring-2 focus:ring-fuchsia-300"

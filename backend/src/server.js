@@ -9,12 +9,22 @@ import aiRoutes from "./routes/aiRoutes.js";
 
 dotenv.config();
 
+console.log("=================================");
+console.log("PORT:", process.env.PORT);
+console.log("MONGO_URI:", process.env.MONGO_URI);
+console.log("=================================");
+
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 
-connectDB();
+try {
+  await connectDB();
+  console.log("Database connection function executed");
+} catch (error) {
+  console.error("Database connection error:", error);
+}
 
 app.get("/", (req, res) => {
   res.json({ message: "Smart Notes API is running" });

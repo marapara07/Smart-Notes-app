@@ -38,7 +38,7 @@ function Navbar() {
             Dashboard
           </NavLink>
           <NavLink to="/semantic-search" className={linkClass}>
-            Semantic Search
+            Search in Notes
           </NavLink>
           <NavLink to="/ask-notes" className={linkClass}>
             Ask Notes

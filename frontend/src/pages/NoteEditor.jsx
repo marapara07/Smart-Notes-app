@@ -125,7 +125,7 @@ function NoteEditor() {
               </label>
               <input
                 type="text"
-                placeholder="Ex: JWT Authentication"
+                placeholder="Topic of the note"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 className="w-full rounded-2xl border border-fuchsia-100 px-4 py-3 outline-none focus:ring-2 focus:ring-fuchsia-300"

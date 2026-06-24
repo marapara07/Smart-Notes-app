@@ -35,14 +35,13 @@ function AskNotes() {
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
         <div className="rounded-3xl bg-white/85 backdrop-blur-md border border-white shadow-lg shadow-fuchsia-100 p-6 md:p-8 mb-6">
           <p className="inline-block mb-3 px-4 py-1 rounded-full bg-violet-100 text-violet-700 text-sm font-semibold">
-            RAG feature
+            AI feature
           </p>
           <h1 className="text-3xl font-bold text-slate-800 mb-2">
             Ask Your Notes
           </h1>
           <p className="text-slate-600 mb-5">
-            Ask a question, retrieve relevant notes using embeddings, then let
-            Gemini generate an answer.
+            Ask questions in natural language and get answers based on your notes.
           </p>
 
           {error && (
@@ -54,7 +53,7 @@ function AskNotes() {
           <form onSubmit={handleAsk} className="flex flex-col md:flex-row gap-3">
             <input
               type="text"
-              placeholder="Ex: What did I write about authentication?"
+              placeholder="Ex: What did I write about ...?"
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
               className="flex-1 rounded-2xl border border-fuchsia-100 px-4 py-3 outline-none focus:ring-2 focus:ring-fuchsia-300"
