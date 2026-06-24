@@ -16,7 +16,14 @@ console.log("=================================");
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://smart-notes-app-beta.vercel.app"
+  ],
+  credentials: true
+}));
+
 app.use(express.json());
 
 try {
@@ -29,6 +36,7 @@ try {
 app.get("/", (req, res) => {
   res.json({ message: "Smart Notes API is running" });
 });
+
 
 app.use("/api/auth", authRoutes);
 app.use("/api/notes", noteRoutes);
